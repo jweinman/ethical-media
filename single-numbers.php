@@ -6,7 +6,7 @@
 					<div class="view-default">
 						<div class="entry-type">								
 							<h3 class="type-title">
-								<i class="icon fas fa-exclamation-signal"></i>
+								<i class="icon fas fa-signal"></i>
 								Numbers
 							</h3>
 							<a class="link-tooltip" href="" data-toggle="tooltip" title="This is an explainer tooltip"><i class="icon far fa-question-circle"></i><span class="sr-only">What is this?</span></a>
@@ -16,7 +16,7 @@
 					<div class="view-affix">
 						<div class="row">
 							<div class="column--left">
-								<i class="icon fas fa-exclamation-signal"></i>
+								<i class="icon fas fa-signal"></i>
 							</div><!-- .column--left -->
 							<div class="column--middle">
 								<h3 class="type-title">Numbers</h3>
