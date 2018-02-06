@@ -31,6 +31,7 @@
 					  if ($(window).width() > 991){
 						  var headerHeight = $('#header-affix .column--sidebar .module--article-nav .module-header').outerHeight();
 						  var headerAffix = $('#header-affix');
+						  var viewDefault = $('.view-default', headerAffix);
 						  var hero = $('.entry-full .entry-hero');
 						  // first move the nav up
 						  hero.css({
@@ -39,9 +40,21 @@
 						  						  						  
 						  headerAffix.affix({
 							  offset: {
-							    top: headerAffix.offset().top,
-							    bottom: $('body').outerHeight(true) - $('.entry-footer .column--sidebar').offset().top
+							    top: (viewDefault.offset().top + headerHeight) - 0,
+							    bottom: $('body').outerHeight(true) - $('.entry-footer .column--sidebar').offset().top 
 							  }
+							}).on('affix.bs.affix', function(){
+								$('.entry-main .column--main').css({
+									paddingTop : viewDefault.outerHeight(true) + 20 +'px'
+								});
+							}).on('affix-top.bs.affix', function(){
+								$('.entry-main .column--main').css({
+									paddingTop : 0+'px'
+								});
+							}).on('affix-bottom.bs.affix', function(){
+								$('.entry-main .column--main').css({
+									paddingTop : 0+'px'
+								});
 							});
 						} // if tablet - desktop
 						else{
